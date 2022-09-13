@@ -1,8 +1,11 @@
 ---
 const author = "phenomen#1337";
+const github = "https://github.com/phenomen/worldbuilding";
 const year = new Date().getFullYear();
 ---
 
 <div class="my-10 text-gray-300 text-center text-xs">
-  <blockquote>{author} // {year}</blockquote>
+  {author} // {year} // <a href={github} class="hover:underline" target="_blank"
+    >Github</a
+  >
 </div>

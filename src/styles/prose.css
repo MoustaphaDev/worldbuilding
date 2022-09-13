@@ -34,7 +34,7 @@
 }
 
 .prose h1 {
-  @apply uppercase font-black;
+  @apply uppercase font-black text-center;
 }
 
 .prose h2 a {
@@ -42,7 +42,7 @@
 }
 
 .prose blockquote {
-  @apply border-black;
+  @apply border-black prose-lg;
 }
 
 .prose h2 a,

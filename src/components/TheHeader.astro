@@ -1,8 +1,21 @@
 ---
-const github = "https://github.com/phenomen/worldbuilding";
+const { title = "миросоздание", navigation = [] } = Astro.props;
 ---
 
-<nav class="w-full mb-10 p-2 border-b flex">
-  <a class="flex-1 font-bold hover:underline" href="/">миросоздание</a>
-  <a class="hover:underline" target="_blank" href={github}>Github</a>
+<nav
+  class="w-full mb-6 py-2 border-b flex top-0 sticky space-x-2 bg-white text-xs md:text-sm"
+>
+  <div class="flex-1 font-bold space-x-1">
+    <a href="/" class="hover:text-gray-500">←</a>
+    <a href="#" class="hover:underline">{title}</a>
+  </div>
+  <div class="justify-center space-x-1 md:space-x-2">
+    {
+      navigation.map((link) => (
+        <a href={"#" + link.slug} class="hover:underline">
+          {link.title}
+        </a>
+      ))
+    }
+  </div>
 </nav>

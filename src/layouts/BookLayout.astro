@@ -13,15 +13,14 @@ const { frontmatter } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
+    <link rel="icon" type="image/png" href="/favicon.png" />
     <title>{frontmatter.title}</title>
   </head>
 
-  <body class="max-w-5xl px-2 md:px-4 mx-auto font-sans">
-    <TheHeader />
+  <body class="max-w-4xl px-2 md:px-4 mx-auto font-sans">
+    <TheHeader title={frontmatter.title} navigation={frontmatter.navigation} />
 
-    <article class="prose lg:prose-lg max-w-none">
+    <article class="prose max-w-none">
       <h1>{frontmatter.title}</h1>
       <slot />
     </article>

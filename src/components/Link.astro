@@ -1,6 +1,4 @@
 ---
-import { Icon } from "astro-icon";
-
 export interface Props {
   title: string;
   href: string;
@@ -13,11 +11,11 @@ const { href, title, style = "neutral" } = Astro.props;
 <div class={`note ${style}`}>
   <a
     href={href}
-    class="flex flex-row items-center no-underline hover:underline"
+    class="flex flex-row items-center no-underline hover:underline font-bold"
   >
     <span class="flex-1">
       {title}
     </span>
-    <Icon name="tabler:chevron-right" />
+    <span>→</span>
   </a>
 </div>
