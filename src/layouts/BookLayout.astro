@@ -1,0 +1,28 @@
+---
+import "@styles/common.css";
+import "@styles/prose.css";
+
+import TheHeader from "@components/TheHeader.astro";
+
+const { frontmatter } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{frontmatter.title}</title>
+  </head>
+
+  <body class="max-w-6xl px-2 md:px-4 mx-auto">
+    <TheHeader />
+
+    <article class="prose lg:prose-lg w-full">
+      <h1>{frontmatter.title}</h1>
+      <slot />
+    </article>
+  </body>
+</html>

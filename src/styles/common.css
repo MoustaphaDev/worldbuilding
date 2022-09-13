@@ -1,0 +1,24 @@
+html {
+  scroll-padding-top: 30px;
+}
+
+.dark body,
+.dark html {
+  @apply bg-gray-800 text-white;
+}
+
+[astro-icon] {
+  @apply w-5 h-5 inline align-middle;
+}
+
+.note.alert {
+  @apply bg-red-50 hover:bg-red-100 prose-red;
+}
+
+.note.info {
+  @apply bg-sky-50 hover:bg-sky-100 prose-sky;
+}
+
+.note.success {
+  @apply bg-emerald-50 hover:bg-emerald-100 prose-emerald;
+}

@@ -1,0 +1,25 @@
+.prose h1 {
+  @apply uppercase font-black;
+}
+
+.prose h2 a {
+  @apply uppercase font-extrabold;
+}
+
+.prose blockquote {
+  @apply border-black;
+}
+
+.prose h2 a,
+.prose h3 a,
+.prose h4 a {
+  @apply no-underline hover:underline;
+}
+
+.prose code::before {
+  content: "«";
+}
+
+.prose code::after {
+  content: "»";
+}

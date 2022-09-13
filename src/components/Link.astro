@@ -1,0 +1,18 @@
+---
+export interface Props {
+  title: string;
+  href: string;
+  style: string;
+}
+
+const { href, title, style } = Astro.props;
+---
+
+<div class={`note p-2 rounded-lg ${style}`}>
+  <a href={href} class="flex flex-row no-underline">
+    <span class="flex-1">
+      {title}
+    </span>
+    <span>→</span>
+  </a>
+</div>
