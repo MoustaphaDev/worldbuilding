@@ -1,18 +1,23 @@
 ---
+import { Icon } from "astro-icon";
+
 export interface Props {
   title: string;
   href: string;
   style?: string;
 }
 
-const { href, title, style = "info" } = Astro.props;
+const { href, title, style = "neutral" } = Astro.props;
 ---
 
 <div class={`note p-2 rounded-lg ${style}`}>
-  <a href={href} class="flex flex-row no-underline">
+  <a
+    href={href}
+    class="flex flex-row items-center no-underline hover:underline"
+  >
     <span class="flex-1">
       {title}
     </span>
-    <span>→</span>
+    <Icon name="tabler:chevron-right" />
   </a>
 </div>

@@ -11,8 +11,8 @@ html {
   @apply w-5 h-5 inline align-middle;
 }
 
-.note.alert {
-  @apply bg-red-50 hover:bg-red-100 prose-red;
+.note.neutral {
+  @apply bg-gray-50 hover:bg-gray-100;
 }
 
 .note.info {
@@ -21,6 +21,10 @@ html {
 
 .note.success {
   @apply bg-emerald-50 hover:bg-emerald-100 prose-emerald;
+}
+
+.note.alert {
+  @apply bg-red-50 hover:bg-red-100 prose-red;
 }
 
 a .icon::before {
