@@ -1,14 +1,19 @@
+/* Scroll Offset */
+
 html {
   scroll-padding-top: 5px;
 }
 
-.dark body,
-.dark html {
-  @apply bg-gray-800 text-white;
-}
+/* Inline Icons */
 
 [astro-icon] {
   @apply w-5 h-5 inline align-middle;
+}
+
+/* Block Containers */
+
+.note {
+  @apply p-2 rounded-lg;
 }
 
 .note.neutral {
@@ -26,6 +31,8 @@ html {
 .note.alert {
   @apply bg-red-50 hover:bg-red-100 prose-red;
 }
+
+/* Heading Anchor Links */
 
 a .icon::before {
   content: "#";

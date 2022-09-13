@@ -10,7 +10,7 @@ export interface Props {
 const { href, title, style = "neutral" } = Astro.props;
 ---
 
-<div class={`note p-2 rounded-lg ${style}`}>
+<div class={`note ${style}`}>
   <a
     href={href}
     class="flex flex-row items-center no-underline hover:underline"
