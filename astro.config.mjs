@@ -7,6 +7,7 @@ import rehypeAutolinkHeadings from "rehype-autolink-headings";
 
 // https://astro.build/config
 export default defineConfig({
+  site: "https://worldbuilding.ruleplaying.com",
   integrations: [tailwind(), mdx(), sitemap()],
   markdown: {
     rehypePlugins: [

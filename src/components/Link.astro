@@ -2,10 +2,10 @@
 export interface Props {
   title: string;
   href: string;
-  style: string;
+  style?: string;
 }
 
-const { href, title, style } = Astro.props;
+const { href, title, style = "info" } = Astro.props;
 ---
 
 <div class={`note p-2 rounded-lg ${style}`}>
