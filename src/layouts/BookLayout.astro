@@ -3,6 +3,7 @@ import "@styles/common.css";
 import "@styles/prose.css";
 
 import TheHeader from "@components/TheHeader.astro";
+import TheFooter from "@components/TheFooter.astro";
 
 const { frontmatter } = Astro.props;
 ---
@@ -17,12 +18,14 @@ const { frontmatter } = Astro.props;
     <title>{frontmatter.title}</title>
   </head>
 
-  <body class="max-w-6xl px-2 md:px-4 mx-auto">
+  <body class="max-w-5xl px-2 md:px-4 mx-auto font-sans">
     <TheHeader />
 
-    <article class="prose lg:prose-lg w-full">
+    <article class="prose lg:prose-lg max-w-none">
       <h1>{frontmatter.title}</h1>
       <slot />
     </article>
+
+    <TheFooter />
   </body>
 </html>

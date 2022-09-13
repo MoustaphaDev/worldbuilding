@@ -1,5 +1,5 @@
 html {
-  scroll-padding-top: 30px;
+  scroll-padding-top: 5px;
 }
 
 .dark body,
@@ -21,4 +21,9 @@ html {
 
 .note.success {
   @apply bg-emerald-50 hover:bg-emerald-100 prose-emerald;
+}
+
+a .icon::before {
+  content: "#";
+  @apply ml-2 text-gray-200 not-italic font-normal;
 }

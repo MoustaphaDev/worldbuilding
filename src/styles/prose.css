@@ -1,3 +1,38 @@
+@font-face {
+  font-family: rfd;
+  font-weight: 400;
+  src: url(/fonts/rfd-regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: rfd;
+  font-weight: 500;
+  src: url(/fonts/rfd-semibold.ttf) format("truetype");
+}
+@font-face {
+  font-family: rfd;
+  font-weight: 600;
+  src: url(/fonts/rfd-bold.ttf) format("truetype");
+}
+@font-face {
+  font-family: rfd;
+  font-weight: 700;
+  src: url(/fonts/rfd-bold.ttf) format("truetype");
+}
+@font-face {
+  font-family: rfd;
+  font-weight: 800;
+  src: url(/fonts/rfd-ultrabold.ttf) format("truetype");
+}
+@font-face {
+  font-family: rfd;
+  font-weight: 900;
+  src: url(/fonts/rfd-black.ttf) format("truetype");
+}
+
+.font-sans {
+  font-family: "rfd", "Roboto", "Arial", sans-serif;
+}
+
 .prose h1 {
   @apply uppercase font-black;
 }
@@ -14,6 +49,10 @@
 .prose h3 a,
 .prose h4 a {
   @apply no-underline hover:underline;
+}
+
+.prose code {
+  @apply font-sans font-semibold;
 }
 
 .prose code::before {
