@@ -13,7 +13,7 @@ html {
 /* Block Containers */
 
 .note {
-  @apply p-2 rounded-lg;
+  @apply px-2 py-3 rounded-lg my-2;
 }
 
 .note.neutral {

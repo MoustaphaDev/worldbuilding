@@ -8,14 +8,11 @@ export interface Props {
 const { href, title, style = "neutral" } = Astro.props;
 ---
 
-<div class={`note ${style}`}>
-  <a
-    href={href}
-    class="flex flex-row items-center no-underline hover:underline font-bold"
-  >
+<a href={href} class="no-underline hover:underline font-bold">
+  <div class={`note flex flex-row items-center ${style}`}>
     <span class="flex-1">
       {title}
     </span>
     <span>→</span>
-  </a>
-</div>
+  </div>
+</a>
