@@ -10,20 +10,19 @@ const { title = "Миросоздание", game, isHomepage = false } = Astro.p
 
 {!isHomepage && (
 <nav
-  class="w-full py-2 border-b flex top-0 sticky space-x-2 bg-white text-xs md:text-sm"
+  class="w-full py-2 border-b flex top-0 sticky bg-white text-xs md:text-sm"
 >
-  <div class="flex-1 font-bold space-x-1">
+  <div class="flex-1 font-semibold">
+    <a href="/" class="hover:underline">
+          Миросоздание
+      </a>
+      <span class="text-gray-400">/</span>
     {
-      game ? (
+      game && (
         <a href="./" class="hover:underline">
           {game}
         </a>
-        <span class="text-gray-400"> // </span>
-      ) : (
-      <a href="/" class="hover:underline">
-          Миросоздание
-      </a>
-      <span class="text-gray-400"> // </span>
+        <span class="text-gray-400">/</span>
       )
     }
     <a href="#" class="hover:underline">{title}</a>

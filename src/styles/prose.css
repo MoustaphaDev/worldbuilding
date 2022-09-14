@@ -21,12 +21,12 @@
 @font-face {
   font-family: rfd;
   font-weight: 800;
-  src: url(/fonts/rfd-ultrabold.ttf) format("truetype");
+  src: url(/fonts/rfd-ultrabold-condensed.ttf) format("truetype");
 }
 @font-face {
   font-family: rfd;
   font-weight: 900;
-  src: url(/fonts/rfd-black.ttf) format("truetype");
+  src: url(/fonts/rfd-black-extended.ttf) format("truetype");
 }
 
 .font-sans {
@@ -34,7 +34,7 @@
 }
 
 .prose h1 {
-  @apply uppercase font-black text-center;
+  @apply uppercase font-black sm:text-center break-words;
 }
 
 .prose h2 a {
@@ -43,6 +43,7 @@
 
 .prose blockquote {
   @apply border-black prose-lg;
+  quotes: "«" "»";
 }
 
 .prose h2 a,
@@ -52,13 +53,10 @@
 }
 
 .prose code {
-  @apply font-sans font-semibold;
+  @apply font-serif font-semibold bg-gray-50;
 }
 
-.prose code::before {
-  content: "«";
-}
-
+.prose code::before,
 .prose code::after {
-  content: "»";
+  content: none;
 }
